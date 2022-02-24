@@ -3,13 +3,13 @@ import Video from '../video/Video';
 
 function VideoList(props) {
     return (
-        <ul>
+        <div>
             {
                 props.videoItems.map(videoItem => (
                     <Video videoItem={videoItem} key={videoItem.id} />
                 ))
             }
-        </ul>
+        </div>
     )
 }
 export default VideoList;
