@@ -1,15 +1,16 @@
 import React from 'react';
 import Video from '../video/Video';
+import './videolist.css'
 
 function VideoList(props) {
     return (
-        <div>
+        <ul className='videolist'>
             {
                 props.videoItems.map(videoItem => (
                     <Video videoItem={videoItem} key={videoItem.id} />
                 ))
             }
-        </div>
+        </ul>
     )
 }
 export default VideoList;
