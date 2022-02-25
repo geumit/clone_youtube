@@ -7,6 +7,18 @@ import Searchbar from './components/searchbar/Searchbar';
 function App() {
   const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
   const [videoItems, setVideoItems] = useState([]);
+  const search =(searchValueTxt)=>{
+    var requestOptions ={
+      method: 'GET',
+      redirect: 'follow'
+    }
+
+  fetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${searchValueTxt}&key=${API_KEY}`, requestOptions)
+      .then(response => response.json())
+      .then(result => setVideoItems(result.items)) 
+      .catch(error => console.log('error', error));
+  // search 함수 끝
+  };
   useEffect(() => {
     const requestOptions = {
       method: 'GET',
@@ -20,7 +32,7 @@ function App() {
   }, [])
   return (
     <div className="App">
-      <Searchbar />
+      <Searchbar searchResult={search} />
       <VideoList videoItems={videoItems} />
     </div>
   );
