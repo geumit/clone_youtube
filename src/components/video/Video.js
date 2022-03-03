@@ -1,17 +1,19 @@
 import React from 'react';
 import './video.css'
 
-function Video(props) {
+function Video({display,onVideoClick,videoItem}) {
+    const container = 'container';
+    const displayClass = display === 'rowlist' ? 'list-h' : 'list-v' ;
+
     return (
-        <li className='videoContainer'>
-            <div className='video'>
-                <img className='thumimg' src={props.videoItem.snippet.thumbnails.medium.url} alt='video thumbnail'alt='thumbnail img'/>
-            </div>
-            <div className='titledata'>
-                <p className='title'>{props.videoItem.snippet.title}</p>
-                <p className='channelTitle'>{props.videoItem.snippet.channelTitle}</p>
-            </div>
-            
+        <li className={`${container} ${displayClass}`}>
+            <div className='video' onClick={()=>{onVideoClick(videoItem)}}>
+                <img className='thumimg' src={videoItem.snippet.thumbnails.medium.url} alt='video thumbnail'alt='thumbnail img'/>
+                <div className='titledata'>
+                    <p className='title'>{videoItem.snippet.title}</p>
+                    <p className='channelTitle'>{videoItem.snippet.channelTitle}</p>
+                </div>
+            </div>         
         </li>
     )
 }
