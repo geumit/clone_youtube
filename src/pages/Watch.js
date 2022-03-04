@@ -6,11 +6,13 @@ import Videoview from '../components/videoview/Videoview';
 const Watch = ({videoItems,onVideoClick,selectView}) => {
     return(        
         <div className='content'>
-            {
+            {/* {
             selectView && <div className='view'> <Videoview video={selectView} /> </div>
-            }
+            } */}
+            <div className='view'> <Videoview video={selectView} /></div>
             <div className='list'>
-            <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display={selectView ? 'rowlist':'collist'} />
+            {/* <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display={selectView ? 'rowlist':'collist'} /> */}
+            <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display='rowlist' />
             </div>
         </div>
     

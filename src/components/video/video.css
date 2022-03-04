@@ -4,9 +4,13 @@
 .container.list-h{flex: 1 1 100%;}
 .container.list-h .thumimg{width: 30%;}
 
-.video{width: 100%;height: 100%;display: flex;flex-direction: row;cursor: pointer;transition: transform 250m ease-in;transition: all 0.2s ease-in;}
+.video{width: 100%;height: 100%;cursor: pointer;transition: transform 250m ease-in;transition: all 0.2s ease-in;}
 .video:hover{transform: scale(1.01);box-shadow: 3px 3px 5px 0px rgba(191,191,191,0.53);}
 .thumimg{width: 100%;}
-.titledata{text-align: left;padding: 16px;}
-.title{font-size: 14px;}
+.titledata{text-align: left;padding: 1rem;display: flex;}
+.titledata .channelImg{width: 36px;height: 36px;border-radius: 50%;overflow: hidden;}
+.titledata .channelImg img{width: 36px;height: 36px;}
+.title,.channel{font-size: 0.925rem;margin: 0;}
 .channelTitle{font-size: 11px;text-align: center;}
+a{text-decoration: none;color: #111;}
+.channel{font-size: 0.7rem;color: #c0c0c0;}

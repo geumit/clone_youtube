@@ -11,11 +11,12 @@ return(
             <Menubar />
         </div>
         <div className='content'>
-        {
+        {/* {
           selectView && <div className='view'> <Videoview video={selectView} /> </div>
-        }
+        } */}
         <div className='list'>
-          <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display={selectView ? 'rowlist':'collist'} />
+          {/* <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display={selectView ? 'rowlist':'collist'} /> */}
+          <VideoList videoItems={videoItems} onVideoClick={onVideoClick} display='collist'/>
         </div>
       </div>
     </div>
