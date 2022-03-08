@@ -9,6 +9,8 @@ import Home from './pages/Home';
 import Search from './pages/Search';
 import Watch from './pages/Watch';
 
+// let defaultVideos = JSON.parse(sessionStorage.getItem('defaultVideos')) || null;
+
 function App({youtube}) {
 
   // const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
